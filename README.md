@@ -13,6 +13,7 @@ A therapy-agnostic analytics platform for nephrology care delivery supporting Pe
 - **[KPIs & Metrics](./docs/05-kpis/kpis.md)** - Business metrics and performance indicators
 - **[PD Domain Model](./docs/06-implementation/pd-domain-model.md)** - Phase 1: Peritoneal Dialysis specifics
 - **[Phased Implementation](./docs/06-implementation/phased-approach.md)** - Implementation roadmap
+- **[Platform Tooling](./docs/07-tooling/platform-tooling.md)** - Data platform tooling requirements (MinIO, ingest, dbt, CI/CD)
 
 ## Platform Principles
 
