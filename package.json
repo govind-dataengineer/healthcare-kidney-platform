@@ -1,0 +1,15 @@
+{
+  "name": "kidney-care-analytics-docs",
+  "private": true,
+  "description": "Development tooling for Kidney Care Analytics Platform documentation",
+  "scripts": {
+    "lint": "markdownlint README.md docs/**/*.md",
+    "check-links": "node scripts/check-links.mjs",
+    "serve": "serve -l 8080",
+    "validate": "npm run lint && npm run check-links"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.43.0",
+    "serve": "^14.2.4"
+  }
+}
