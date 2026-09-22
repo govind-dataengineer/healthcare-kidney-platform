@@ -1,0 +1,32 @@
+services:
+  floci:
+    image: floci/floci:latest
+    container_name: kidney-platform-floci
+    ports:
+      - "${FLOCI_PORT:-4567}:4566"
+    environment:
+      FLOCI_DEFAULT_REGION: us-east-1
+    volumes:
+      - floci-state:/app/data
+      # Lambda support is added in the next milestone. Keeping the socket here
+      # lets Floci run Lambda containers when that service is introduced.
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  bronze-loader:
+    build:
+      context: ./warehouse/loader
+    container_name: kidney-platform-bronze-loader
+    depends_on:
+      - floci
+    environment:
+      FLOCI_ENDPOINT_URL: http://floci:4566
+      RAW_BUCKET: kidney-raw-landing
+      DUCKDB_PATH: /data/kidney_analytics.duckdb
+      POLL_INTERVAL_SECONDS: 5
+    volumes:
+      - duckdb-state:/data
+    restart: unless-stopped
+
+volumes:
+  floci-state:
+  duckdb-state:

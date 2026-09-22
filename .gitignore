@@ -1,1 +1,11 @@
 node_modules/
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.duckdb
+*.duckdb.wal
+target/
+logs/
+lambdas/**/function.zip

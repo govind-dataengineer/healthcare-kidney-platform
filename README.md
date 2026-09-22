@@ -14,6 +14,8 @@ A therapy-agnostic analytics platform for nephrology care delivery supporting Pe
 - **[PD Domain Model](./docs/06-implementation/pd-domain-model.md)** - Phase 1: Peritoneal Dialysis specifics
 - **[Phased Implementation](./docs/06-implementation/phased-approach.md)** - Implementation roadmap
 - **[Platform Tooling](./docs/07-tooling/platform-tooling.md)** - Data platform tooling requirements (MinIO, ingest, dbt, CI/CD)
+- **[MVP Local Foundation](./docs/07-tooling/mvp-local-foundation.md)** - Run the local AWS-shaped learning environment
+- **[Device Simulator](./services/device-simulator/README.md)** - Generate synthetic APD therapy events for Kinesis
 
 ## Platform Principles
 
